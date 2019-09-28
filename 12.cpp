@@ -5,13 +5,13 @@ int main()
 {
 	setlocale(LC_ALL, "Russian");
 
-	int a, n;
+	int a, i;
 	bool prostoe = true;
 	cout << "введите число: ";
 	cin >> a;
-	for (n = 2; n <= (sqrt(abs(a))); n++)
+	for (i = 2; i <= a; i++)
 	{
-		if (a % n == 0)
+		if (a % i == 0)
 		{
 			prostoe = false;
 			break;
