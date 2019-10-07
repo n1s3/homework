@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
 int main()
@@ -14,19 +14,34 @@ int main()
 	cin >> b;
 	cout << "\nc = ";
 	cin >> c;
-	
+
 	if (a == 0)
 	{
-		x = -c / b;
-		cout << "\nx = " << x << endl;
+		if (b == 0) 
+		{
+			if (c == 0)
+			{
+				cout << "\nx - любое число\n";
+			}
+			else
+			{
+				cout << "\nкорней нет\n";
+			}
+
+		}
+		else
+		{
+			x = -c / b;
+			cout << "\nx = " << x << endl;
+		}
 	}
 	else
 	{
 		D = b * b - 4 * a * c;
 		if (D > 0)
 		{
-			x1 = -b + sqrt(D) / (2 * a);
-			x2 = -b - sqrt(D) / (2 * a);
+			x1 = (-b + sqrt(D)) / (2 * a);
+			x2 = (-b - sqrt(D)) / (2 * a);
 			cout << "\nx1 = " << x1 << "\nx2 = " << x2 << endl;
 		}
 		if (D < 0)
@@ -40,4 +55,3 @@ int main()
 		}
 	}
 }
-
