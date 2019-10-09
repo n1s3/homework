@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <cmath>
 using namespace std;
 int main()
@@ -9,16 +9,19 @@ int main()
 	bool prostoe = true;
 	cout << "введите число: ";
 	cin >> a;
-	for (i = 2; i <= a; i++)
+	if (a > 1)
 	{
-		if (a % i == 0)
+		for (i = 2; i < a; i++)
 		{
-			prostoe = false;
-			break;
+			if (a % i == 0)
+			{
+				prostoe = false;
+				break;
+			}
 		}
 	}
-	if (prostoe)
-		cout << "простое" << endl;
-	else
+	if (prostoe == true)
+		cout << "простое";
+	else 
 		cout << "составное " << endl;
 }
