@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <math.h>
 using namespace std;
 
@@ -6,7 +6,7 @@ using namespace std;
 
 double BMI(double weight, double height)
 {
-	double BMI = weight / pow(height / 100, 2);
+	double BMI = weight / pow(height, 2);
 	if (weight <= 0 || height <= 0)
 	{
 		cout << "error";
@@ -34,6 +34,6 @@ void printBMI(double BMI) {
 		double weight, height;
 		cout << "weight, height "; 
 		cin >> weight >> height;
-		printBMI(BMI(weight, height));
+		printBMI(BMI(weight, height / 100));
 		return 0;
 	}
