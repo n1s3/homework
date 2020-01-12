@@ -12,11 +12,8 @@ void sort(int arr[], int size) {
 			}
 		}
 	}
-
-	size = 20;
 }
 void output(int arr[], int size) {//вывод
-
 	for (int i = 0; i < size; i++) {
 		cout << arr[i] << " ";
 	}
@@ -30,14 +27,7 @@ int main() {
         cout << "arr[" << i+1 << "] = ";
         cin >> arr[i];
     }
-	
-	
-	
-	arr[0] = 34343;
 	sort(arr, size);
-
-	cout << size << " ";
 	output(arr, size);
-
     return(0);
 }
