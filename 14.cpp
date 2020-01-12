@@ -1,27 +1,19 @@
-﻿#include <iostream>
-using namespace std;
+#include <iostream>
 int main() {
-	bool find(0);
-	int s, l1, r1, l2, r2, l22;
-	cin >> s >> l1 >> r1 >> l2 >> r2;
-	if (l1 <= r1 && l2 <= r2)
-	{
-		for ( ; l1 <= r1; l1++)
-		{
-			for (l22 = l2; l22 <= r2; l22++)
-			{
-				if (l1 + l22 == s)
-				{
-					cout << l1 << ' ' << l22 << endl;
-					find = 1;
-					break;
-				}
-				else if (l1 == r1 && l22 == r2 && l1 + l22 != s) cout << -1 << endl;
-			}
-			if (find == 1) break;
-		}
+    using namespace std;
+    long long int s, l1, r1, l2, r2;
+    bool find(0);
+    cin >> s >> l1 >> r1 >> l2 >> r2;
+    for (int n = l1; n <= r1; n++) {//чтобы просмотреть диапазон чисел присваивваем начальные значения новым переменным
+        for (int m = l2; m <= r2; m++)
+            if (n + m = s) {
+                cout << n << " " << m;
+                find = 1; // когда число найдено, выходим цикла
+                break; 
+            }
+        if (find) break; // выходим из цикла
+    }
+    if (!find) cout << "-1";
 
-	}
-	else cout << "na4alo otrezka ne mojet bitb bolbshe konca";
-	return 0;
+    return(0);
 }
